@@ -13,7 +13,7 @@
 
 .navbar-logo {
     box-sizing: border-box;
-    width: 200px;
+    width: 150px;
     height: 100%;
     background: blue;
     margin-left: 1%;
@@ -23,7 +23,7 @@
 .navbar-list {
     box-sizing: border-box;
     background: rgba(91, 4, 163);
-    width: 200px;
+    width: auto;
     height: 100%;
     margin-right: 1%;
     display: flex;
@@ -34,7 +34,6 @@
 }
 
 .menu-des {
-
     position: relative;
 }
 
@@ -46,19 +45,67 @@
     margin: 0;
     padding: 3rem 1rem 1rem;
     width: 200px;
+    height: auto;
     background: rgb(182, 164, 164);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
 }
-
-
 
 .close-menu{
     position: absolute;
     top: calc(100% + 25px);
     right: 10px;
     display: block;
+    z-index: 1;
+}
+
+.divCar{
+    position: relative;
+}
+
+.carPanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: grey;
+    width: 25%;
+    height: 100vh;
     z-index: 2;
 }
 
+.car-header{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.carPanel > p{
+    
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total{
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.btnPedir{
+    border-radius: 15px;
+    height: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
 
