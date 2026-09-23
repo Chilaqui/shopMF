@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { NgClass } from '../../../../node_modules/@angular/common/types/_common_module-chunk';
+import { Car } from '../car/car';
+
 
 @Component({
   selector: 'app-navbar',
   styleUrl: './navbar.css',
   templateUrl: './navbar.html',
+  imports: [Car],
 })
 export class Navbar {
 
@@ -16,24 +18,21 @@ export class Navbar {
   
 
 
-openMenu(){
-  this.menuOpen = true;
-}
+  openMenu(){
+    this.menuOpen = true;
+  }
 
-closeMenu(){
-  this.menuOpen = false;
-  this.categoriesOpen = false;
-}
+  closeMenu(){
+    this.menuOpen = false;
+    this.categoriesOpen = false;
+  }
 
-toggleCategories(){
+  toggleCategories(){
   this.categoriesOpen = !this.categoriesOpen;
 }
-
-toggleCar(){
+ toggleCar(){
   this.carOpen = !this.carOpen;
 }
-
-
 
 
 
