@@ -38,7 +38,7 @@
         </svg>
     </button>
     }
-    <div class="card-nav">
+    <div class="card-nav" [class.open]="menuOpen">
         <ul class="ul-list">
             <li><a href="">Inicio</a></li>
             <li><a href="">Hogar</a></li>
@@ -64,6 +64,7 @@
                 @if (categoriesOpen) {
                 <ul>
                     <li><a href="">Dama</a></li>
+                    <li><a href="">Caballero</a></li>
                     <li><a href="">Caballero</a></li>
                     <li><a href="">Niño</a></li>
                     <li><a href="">Niña</a></li>
