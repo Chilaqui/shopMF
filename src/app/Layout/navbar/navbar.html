@@ -1,71 +1,85 @@
 <nav class="navbar">
     <div class="navbar-logo">
-        <img class="logo" src="" alt="">
+        <img class="logo" src="" alt="" />
     </div>
     <div class="navbar-list">
-        <div class="divCar"  >
+        <div class="divCar">
             <button (click)="toggleCar()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart preview-icon"><path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"/><path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"/><circle cx="18" cy="20" r="2"/><circle cx="8" cy="20" r="2"/></svg>
-                
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-shopping-cart preview-icon">
+                    <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                    <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                    <circle cx="18" cy="20" r="2" />
+                    <circle cx="8" cy="20" r="2" />
+                </svg>
             </button>
             <app-car [carOpen]="carOpen" (closeCar)="toggleCar()"></app-car>
-            
-            
         </div>
-        <div class="menu-des" >
+        <div class="menu-des">
             <button class="menuCards" (click)="openMenu()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu preview-icon"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-menu preview-icon">
+                    <path d="M4 5h16" />
+                    <path d="M4 12h16" />
+                    <path d="M4 19h16" />
+                </svg>
             </button>
-           
-            
-           
         </div>
     </div>
     @if (menuOpen) {
-                 <button class="close-menu" (click)="closeMenu()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x preview-icon"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                </button>
-                <div class="card-nav">
-                    <ul class="ul-list">
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Hogar</a></li>
-                    <li>
-                        <button (click)="toggleCategories()">
-                            Categorias
-                            @if (!categoriesOpen) {
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down preview-icon"><path d="m6 9 6 6 6-6"/></svg>
-                            }
-                            
-                            @if (categoriesOpen) {
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up preview-icon"><path d="m18 15-6-6-6 6"/></svg>
-                            }
-                            
-                            
-                        </button>
-                        @if (categoriesOpen) {
+    <button class="close-menu" (click)="closeMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-x preview-icon">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+        </svg>
+    </button>
+    }
+    <div class="card-nav">
+        <ul class="ul-list">
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Hogar</a></li>
+            <li>
+                <button (click)="toggleCategories()">
+                    Categorias
+                    @if (!categoriesOpen) {
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-chevron-down preview-icon">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                    }
 
-                            <ul>
-                                <li><a href="">Dama</a></li>
-                                <li><a href="">Caballero</a></li>
-                                <li><a href="">Niño</a></li>
-                                <li><a href="">Niña</a></li>
-                                <li><a href="">Bebe</a></li>
-                            </ul>
-                            
-                        }
-                    </li>
-                
-                    <li><a href="">Natura</a></li>
-                    <li><a href="">Price Shoes</a></li>
-                    <li><a href="">Vianney</a></li>
-                    <li><a href="">Ofertas</a></li>
+                    @if (categoriesOpen) {
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-chevron-up preview-icon">
+                        <path d="m18 15-6-6-6 6" />
+                    </svg>
+                    }
+                </button>
+                @if (categoriesOpen) {
+                <ul>
+                    <li><a href="">Dama</a></li>
+                    <li><a href="">Caballero</a></li>
+                    <li><a href="">Niño</a></li>
+                    <li><a href="">Niña</a></li>
+                    <li><a href="">Bebe</a></li>
                 </ul>
-                </div>
-                 
-            }
+                }
+            </li>
+
+            <li><a href="">Natura</a></li>
+            <li><a href="">Price Shoes</a></li>
+            <li><a href="">Vianney</a></li>
+            <li><a href="">Ofertas</a></li>
+        </ul>
+    </div>
+    
 </nav>
 
 <!-- icono de agregar cosas al carrito -->
- <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-plus preview-icon"><path d="M16 5h6"/><path d="M19 2v6"/><path d="m2.05 2.05 1.099-.028a1 1 0 011.008.815l2.69 14.347A1 1 0 007.83 18H18"/><path d="M4.564 5H12"/><path d="M6.25 14h12.712a2 2 0 001.991-1.57l.172-1.041"/><circle cx="18" cy="20" r="2"/><circle cx="8" cy="20" r="2"/></svg> -->
-
-
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-plus preview-icon"><path d="M16 5h6"/><path d="M19 2v6"/><path d="m2.05 2.05 1.099-.028a1 1 0 011.008.815l2.69 14.347A1 1 0 007.83 18H18"/><path d="M4.564 5H12"/><path d="M6.25 14h12.712a2 2 0 001.991-1.57l.172-1.041"/><circle cx="18" cy="20" r="2"/><circle cx="8" cy="20" r="2"/></svg> -->
