@@ -40,8 +40,8 @@
     }
     <div class="card-nav" [class.open]="menuOpen">
         <ul class="ul-list">
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Hogar</a></li>
+            <li><a routerLink="/" href="">Inicio</a></li>
+            <li><a routerLink="/hogar" href="">Hogar</a></li>
             <li>
                 <button (click)="toggleCategories()">
                     Categorias
@@ -63,24 +63,25 @@
                 </button>
                 @if (categoriesOpen) {
                 <ul>
-                    <li><a href="">Dama</a></li>
-                    <li><a href="">Caballero</a></li>
-                    <li><a href="">Caballero</a></li>
-                    <li><a href="">Niño</a></li>
-                    <li><a href="">Niña</a></li>
-                    <li><a href="">Bebe</a></li>
+                    <li><a  routerLink="/categories/dama" href="">Dama</a></li>
+                    <li><a  routerLink="/categories/caballero" href="">Caballero</a></li>
+                    <li><a  routerLink="/categories/niño" href="">Niño</a></li>
+                    <li><a  routerLink="/categories/niña" href="">Niña</a></li>
+                    <li><a  routerLink="/categories/bebe" href="">Bebe</a></li>
                 </ul>
                 }
             </li>
 
-            <li><a href="">Natura</a></li>
-            <li><a href="">Price Shoes</a></li>
-            <li><a href="">Vianney</a></li>
-            <li><a href="">Ofertas</a></li>
+            <li><a routerLink="/products/natura" href="">Natura</a></li>
+            <li><a routerLink="/products/price-shoes" href="">Price Shoes</a></li>
+            <li><a routerLink="/products/vianney" href="">Vianney</a></li>
+            <li><a routerLink="/offers" href="">Ofertas</a></li>
+            <li><a href="" routerLink="/admin" >Admin</a></li>
         </ul>
     </div>
     
 </nav>
+
 
 <!-- icono de agregar cosas al carrito -->
 <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-plus preview-icon"><path d="M16 5h6"/><path d="M19 2v6"/><path d="m2.05 2.05 1.099-.028a1 1 0 011.008.815l2.69 14.347A1 1 0 007.83 18H18"/><path d="M4.564 5H12"/><path d="M6.25 14h12.712a2 2 0 001.991-1.57l.172-1.041"/><circle cx="18" cy="20" r="2"/><circle cx="8" cy="20" r="2"/></svg> -->
