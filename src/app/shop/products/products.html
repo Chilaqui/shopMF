@@ -1,7 +1,9 @@
 <div class="products-container" >
     <div class="products-header" >
-        <h2>Descubre nuestra selección de productos de </h2>
-        <img src="/assets/images/LogoNatura.png" alt="natura">
+        <h2>{{titulo}}</h2>
+        <p>{{descripcion}}</p>
+        <p>Marca seleccionada: {{ titulo }}</p>
+        <img [src]="imagen" [alt]="titulo">
         
     </div>
     <div class ="products-list"> 
